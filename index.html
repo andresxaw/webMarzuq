@@ -435,26 +435,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
-        <section>
+        <section class="">
             <div class="contenedor">
-                <h2>Tú cotización aquí</h2>     
+                <h2 class="galeria-titulo centrado">Tú cotización aquí</h2>     
                 <ol>
                     <li>
                         <h3>1. Logística y mobiliario</h3>
-                        <p>Incluye sillas, mesas y transporte de servicios y moviliario.</p>
-                        <p>$550.000</p>
+                        <p class="column1">Incluye sillas, mesas y transporte de servicios y moviliario.</p>
+                        <p class="column2">$550.000</p>
                     </li>
                     <li>
                         <h3>2. Decoración</h3>
-                        <p>Recubrimiento de mesas y sillas.</p>
-                        <p>$600.000</p>
+                        <p class="column1">Recubrimiento de mesas y sillas.</p>
+                        <p class="column2">$600.000</p>
                     </li>
                     <li>
-                       <h3>Catering</h3>
-                       <p>Incluye menú de invitados y personal de servicio, bebidas no alcohólicas, brigada de servicio, y menaje.</p>
-                       <p>$4.565.000</p>
+                       <h3>3. Catering</h3>
+                       <p class="column1">Incluye menú de invitados y personal de servicio, bebidas no alcohólicas, brigada de servicio, y menaje.</p>
+                       <p class="column2">$4.565.000</p>
                     </li>
-                    <li>Ponque</li>
+                    <li>
+                        <h3>Ponque</h3>
+                        <p class="column1">Ponque clásico</p>
+                        <p class="column2">$570.000</p>
+                    </li>
                     <li>Flores</li>
                     <li>Música</li>
                     <li>Wedding planner</li>
@@ -462,6 +466,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </ol>
             </div>
         </section>
+
+        <style>
+            .column1{display: inline-block;width: 70%}
+            .column2{display: inline-block;width: 29%}
+            ol{list-style: none;}
+        </style>
+
         <script type="text/javascript">
           WebFontConfig = {
             google: { families: [ 'Raleway:400,700' ] }
