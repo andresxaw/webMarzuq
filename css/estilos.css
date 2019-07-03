@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  line-height: 1;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: -10px;
+  position: relative;
+  color: inherit;
+}
+.fa-check:before{
+  content: '\f00c';
+}
+.fa-check-circle:before{
+   content: '\f058'
+}
+.fa-envelope-o:before{
+  content: '\f003';
+}
+.fa-home:before{
+  content: '\f015'
+}
+.fa-phone:before{
+  content: '\f095';
+}
+.fa-bars:before{
+  content: '\f0c9';
+}
+.fa-times:before{
+  content: '\f00d';
+}
+
+.fa-map-marker:before{
+  content: '\f041';
+}
+
+.fa-mobile:before{
+  content: '\f10b';
+}
+
+.fa-whatsapp:before{
+	content:'\f232';
+}
+
+.fa-wrench:before{
+	content: '\f0ad';
+}
+
+.fa-graduation-cap:before{
+	content: '\f19d';
+}
+
+.fa-cogs:before{
+	content: '\f085';
+}
+
+.fa-smile:before{
+  content: '\f118';
+}
+
+.fa-line-chart:before{
+  content: '\f201';
+}
+
+.fa-list-ol:before{
+  content: '\f0cb';
+}
+
+.fa-spinner:before{
+  content: '\f110';
+}
+.fa-frown-o:before{
+  content: '\f119'; 
+}
+.fa-clock-o:before{
+  content: '\f017'; 
+}
+.fa-area-chart:before{
+  content: '\f1fe'; 
+}
+.fa-eye:before{
+  content: '\f06e'; 
+}
+.fa-user:before{
+  content: '\f007'; 
+}
+.fa-users:before{
+  content: '\f0c0'
+}
+.fa-refresh:before{
+  content: '\f021'; 
+}
+.fa-arrow-left:before{
+  content: '\f060'; 
+}
+.fa-arrow-right:before{
+  content: '\f061'; 
+}
+.fa-square-o:before{
+  content: '\f096'; 
+}
+.fa-file-text-o:before{
+  content: '\f0f6'
+}
+.fa-list-ul:before{
+  content: '\f016'
+}
+.fa-usd:before{
+  content: '\f155'
+}
+.fa-gavel:before{
+  content: '\f0e3'
+}
+.fa-suitcase:before{
+  content: '\f0f2'
+}
+.fa-calendar:before{
+  content: '\f274'
+}
+.fa-tint:before{
+  content: '\f043'
+}
+.fa-file-text:before{
+  content: '\f15c'
+}
+.fa-building:before{
+  content: '\f1ad'
+}
+.fa-lock:before{
+  content: '\f023'
+}
+.fa-road:before{
+  content: '\f018'
+}
+.fa-bus:before{
+  content: '\f207'
+}
+.fa-smile-o:before{
+  content: '\f118'
+}
+.fa-clock-o:before{
+  content: '\f017'
+}
+.fa-hearth:before{
+  content: '\f004'
+}
+.fa-truck:before{
+  content: '\f0d1'
+}
+.fa-building:before{
+  content: '\f1ad'
+}
+.fa-pencil:before{
+  content: '\f040'
+}
+.fa-arrow-down:before{
+  content: '\f063'
+}
+.fa-thumbs-up:before{
+  content: '\f164'
+}
+.fa-money:before{
+  content: '\f0d6'
+}
+.fa-picture-o:before{
+  content:  '\f03e'
+}
