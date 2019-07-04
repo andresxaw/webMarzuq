@@ -417,14 +417,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <section id="Contacto">
             <div class="contenedor">
-                <h2 class="galeria-titulo centrado">Recibir cotización</h2>
+                <h2 onclick="alert(getPriceCatering())" class="galeria-titulo centrado">Recibir cotización</h2>
                 <h3 class="subtitulo-contacto centrado">Escríbenos si tienes dudas o quieres recibir una cotización</h3>
                 <div class="p-50 linea-bloque medio centrado">
                     <form id="formulario-intro" name="formulario-intro" action="data/data.php" method="post" autocomplete="on">
                         <input class="control control-contacto" type="text" name="Nombre" autocomplete="name" placeholder="Nombre" required>
                         <input type="text" class="control control-contacto" type="text" onfocus="(this.type='date')" name="Fecha de Boda" placeholder="Fecha de Boda" required>
                         <div class="izquierda-f"><p class="contacto-aprox">*Fecha aproximada de la boda</p></div>
-                        <input class="control control-contacto" min="30" type="number" name="Cantidad de Invitados" placeholder="Cantidad de Invitados" required>
+                        <input id="Guests" class="control control-contacto" min="30" type="number" name="Cantidad de Invitados" placeholder="Cantidad de Invitados" required>
                         <input class="control control-contacto" type="tel" title="Digita un teléfono válido"  pattern="[0-9]{7}|[0-9]{10}" name="Teléfono" placeholder="Teléfono" required>
                         <button class="boton control boton-contacto control-contacto bg-rosado color-t-blanco" type="submit"><i class="fa fa-envelope-o"></i> Cotizar</button>
                     </form>
@@ -618,3 +618,71 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </html>
 
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+<script>
+const guests = document.getElementById("Guests")
+const amountCakePerson = 30
+const quantityCake = 0.5
+const quantityChairsTable = 10
+const quantityGuestsWaiter = 15
+const costChair = 5500
+const costTable = 10000
+const costLogistic = 550000
+const costTableCloth = 18000
+const costTableClothUp = 15000
+const costFajon = 2500
+const costNapkin = 2500
+const costWaiter = 110000
+const costCaptainWaiter = 120000
+const costMenu = 39000
+const costMenuService = 20000
+const costSoftDrink = 2500
+
+function amountCake(){
+    const quantityGuest = guests.value * 1
+    const residue = (quantityGuest % amountCakePerson) / amountCakePerson
+    let amount = (quantityGuest / amountCakePerson) - residue
+
+    if(residue > 0 && residue <= quantityCake){
+        amount += quantityCake
+    }else if (residue > quantityCake){
+        amount += quantityCake * 2
+    }
+
+    return amount
+}
+
+function getPriceLogisticFurniture(){
+    const quantityGuest = guests.value * 1
+    const costChairs = quantityGuest * costChair
+    const costTables = Math.round(quantityGuest / quantityChairsTable) * costTable
+
+    return costChairs + costTables + costLogistic
+}
+
+function getPriceDecoration(){
+    const quantityGuest = guests.value * 1
+    const costTableClothes = Math.round(quantityGuest / quantityChairsTable) * costTableCloth
+    const costTableClothesUp = Math.round(quantityGuest / quantityChairsTable) * costTableClothUp
+    const costFajones = quantityGuest * costFajon
+    const costNapkins = quantityGuest * costNapkin
+
+    return costTableClothes + costTableClothesUp + costFajones + costNapkins
+}
+
+function getPriceCatering(){
+    const quantityGuest = guests.value * 1
+    const quantityWaiters = Math.round(quantityGuest / quantityGuestsWaiter)
+    const costWaiters = quantityWaiters * costWaiter
+    const costMenus = costMenu * quantityGuest
+    const costMenusService = costMenuService * quantityWaiters
+    const costSoftDrinks = costSoftDrink * quantityGuest
+
+    return costWaiters + costMenus + costMenuService + costSoftDrinks + costCaptainWaiter
+}
+
+function ge¿¿ 
+
+
+
+</script>
