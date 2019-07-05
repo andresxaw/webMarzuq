@@ -204,7 +204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </style>
     </head>
  
-    <body>S
+    <body>
         <header>
             <div class="barra-contacto-mobile  mobile centrado bg-rosado">
                 <ul>
@@ -230,18 +230,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
         </section>
         <aside id="formulario-cabecera" class="bg-gris centrado">
-            <p class="titulos">Recibe una cotizacón en tu email</p>
-            <div class="centrado">
-                <div class="contenedor-formulario">
-                    <div class="cuerpo-formulario">
-                        <form id="formulario-intro" name="formulario-intro" action="data/data.php" method="post" autocomplete="on">
-                            <input class="control control-intro" type="text" name="Nombre" placeholder="Nombre" required>
-                            <input class="control control-intro" type="email" name="Email" placeholder="Email" required>
-                            <input class="control control-intro" type="tel" title="Digita un teléfono válido" pattern="[0-9]{7}|[0-9]{10}" name="Teléfono" placeholder="Teléfono" required>
-                            <button class="boton control control-intro bg-rosado color-a-blanco" type="submit"><i class="fa fa-envelope-o"></i> Cotizar</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="centrado linea-bloque">  
+                <p class="titulos">¡Recibe tu cotización ahora!</p>
+            </div>
+            <div class="centrado linea-bloque">
+                <a href="#Contacto" onclick="irAncla(this)"class="boton control control-intro bg-rosado color-a-blanco" type="submit"><i class="fa fa-newspaper-o"></i>  Cotizar</a>
             </div>
         </aside>
         <section id="Porque">
