@@ -99,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             .nav{padding:.5em;box-shadow:0 4px 5px -2px rgba(0,0,0,0.22), 0 2px 1px -1px rgba(0,0,0,0.05)}.nav a{font-size: 1.4em; font-weight: 700}.nav li {margin:0 .5em;}
 
             /*Cabecera************************************************/
-            #cabecera{background: url(img/fondo-inicio.jpg) no-repeat 40% center/cover;position: relative;z-index: 1;margin-top:-7.5em;}
+            #cabecera{background: url(img/fondo-inicio.jpg) no-repeat 40% center/cover;position: relative;z-index: 1;margin-top:-7.5em;background-size:cover}
             .contenedor-titulo-principal{position:absolute; bottom:0; left:0;padding: 2em;}
 
             /*Porque************************************************/
@@ -172,13 +172,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 body{padding:0px;}
                 aside{padding: 2em}
                 .logo{height: 4em;width:auto}
-                #cabecera{padding:0; margin: 0;background-size:100% auto}
+                #cabecera{padding:0; margin: 0;background-size:cover}
                 .titulo-principal{font-size: 4.5em;}.subtitulo-principal{font-size: 3em;font-weight: 700;}
                 
                  .control{margin:.5em 1em;padding: .8em 2em}
                  .control-intro{width: auto}
-                 #cabecera{-webkit-animation: fondo-cabecera linear 25s infinite reverse;-moz-animation: fondo-cabecera linear 25s infinite reverse;-ms-animation: fondo-cabecera linear 25s infinite reverse;-o-animation: fondo-cabecera linear 25s infinite reverse;animation: fondo-cabecera linear 25s infinite reverse;}
-                 #cabecera{background-position: 40% -5em}
+                 #cabecera{-webkit-animation: fondo-cabecera linear 5s infinite reverse;-moz-animation: fondo-cabecera linear 5s infinite reverse;-ms-animation: fondo-cabecera linear 5s infinite reverse;-o-animation: fondo-cabecera linear 5s infinite reverse;animation: fondo-cabecera linear 5s infinite reverse;}
                  .porque-linea{height: 3em; width:auto}
                  .galeria-nombre{position: absolute;bottom: 0;left: 0;width: auto;filter: opacity(0);top:auto;margin-bottom:0}
                  .contenedor-quiero-g{margin-top: 0}
@@ -192,17 +191,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             .no-mostrar{display: none}
             body{background: url(img/fondo-footer.jpg) no-repeat center bottom; background-size: 100% auto}
-
-            @keyframes fondo-cabecera{
-                50% {
-                    background-size:130% auto;
+       /*      @keyframes fondo-cabecera{
+                0% {
+                    background-size: auto 100%;
                 }
-            }     
+                100% {
+                    background-size: auto 130%;
+                }
+            }      */
+            
             .boton-peque{padding: .5em 2em}
         </style>
     </head>
  
-    <body>
+    <body>S
         <header>
             <div class="barra-contacto-mobile  mobile centrado bg-rosado">
                 <ul>
@@ -416,84 +418,109 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
         
         <section id="Contacto">
-            <div class="contenedor">
-                <h2 onclick="alert(getPriceCatering())" class="galeria-titulo centrado">Recibir cotización</h2>
+            <h2 class="galeria-titulo centrado">Recibir cotización</h2>
+            <div id="Prices" class="contenedor no-mostrar">
+                <p class="centrado porque-boton">Dado la cantidad de invitados, ésta es la cotización estándar que Eventos Marzuq te ofrece</p>
+                <ol>
+                    <li>
+                        <h3 class="bg-rosa pad1">1. Logística y mobiliario</h3>
+                        <div class="pad">
+                            <p class="column1">Incluye sillas, mesas y transporte de servicios y moviliario.</p>
+                            <p id="LogisticForniture" class="column2 derecha">$0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="bg-rosa pad1">2. Decoración</h3>
+                        <div class="pad">
+                            <p class="column1">Recubrimiento de mesas y sillas.</p>
+                            <p id="Decoration" class="column2 derecha">$0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="bg-rosa pad1">3. Catering</h3>
+                        <div class="pad">
+                            <p class="column1">Incluye menú de invitados y personal de servicio, bebidas no alcohólicas, brigada de servicio, y menaje.</p>
+                            <p id="Catering" class="column2 derecha">$0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="bg-rosa pad1">4. Ponque</h3>
+                        <div class="pad">
+                            <p class="column1">Ponque clásico</p>
+                            <p id="Cake" class="column2 derecha">$0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="bg-rosa pad1">5. Flores</h3>
+                        <div class="pad">
+                            <p class="column1">Incluye flores decorativas de ceremonia, recepcion, bouquet novia y boutonier (flor de accesorio para novio)</p>
+                            <p id="Flowers" class="column2 derecha">$0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="bg-rosa pad1">6. Música</h3>
+                        <div class="pad">
+                            <p class="column1">Incluye musica de sonido y DJ.</p>
+                            <p id="Music" class="column2 derecha">$0</p>
+                        </div> 
+                    </li>
+                    <li>
+                        <h3 class="bg-rosa pad1">7. Wedding planner</h3>
+                        <div class="pad">
+                            <p class="column1">Incluye acompañamiento,asesoría y coordinación,antes y durante la boda.</p>
+                            <p id="WeddingPlanner" class="column2 derecha">$0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="bg-rosa pad1">8. Hacienda</h3>
+                        <div class="pad">
+                            <p class="column1">Incluye alquiler de la hacienda elgida</p>
+                            <p id="Estate" class="column2 derecha">$0</p>
+                        </div>
+                    </li>
+                    <li class="bg-rosado pesado pad1">
+                        <p class="column1">Valor Total</p>
+                        <p id="TotalPrice" class="column2 derecha">$0</p>
+                    </li>
+                </ol>
+                <div class="centrado">
+                    <ul class="fs-normal">
+                        <li class="guiones">○ Para eventos realizados viernes y domingos descuentos del 20% en la hacienda.</li>
+                        <li class="guiones">○ Contactanos ya mismo para obtener un descuento del 5% sobre la cotizacion.</li>
+                    </ul>
+                    <a target="_blank" class="boton control bg-rosado linea-bloque color-a-blanco" href="https://wa.me/573102653308?text=Hola,%20me%20gustaria%20obtener%20mas%20informacion%20del%20descuento"><i class="fa fa-whatsapp"></i> Contáctanos</a>
+                    <a id="ButtonAgainDataPrice" class="boton control bg-rosado linea-bloque color-a-blanco" href="">Volver a Cotizar</a>
+                </div>   
+            </div>
+            <div id="DataPrice" class="contenedor">
                 <h3 class="subtitulo-contacto centrado">Escríbenos si tienes dudas o quieres recibir una cotización</h3>
                 <div class="p-50 linea-bloque medio centrado">
-                    <form id="formulario-intro" name="formulario-intro" action="data/data.php" method="post" autocomplete="on">
+                    <form id="FormGetPrice" name="formulario-intro" action="" method="" autocomplete="on">
                         <input class="control control-contacto" type="text" name="Nombre" autocomplete="name" placeholder="Nombre" required>
-                        <input type="text" class="control control-contacto" type="text" onfocus="(this.type='date')" name="Fecha de Boda" placeholder="Fecha de Boda" required>
+                        <input type="text" class="control control-contacto" type="text" onfocus="(this.type='date')" name="Fecha de Boda" placeholder="Fecha de Boda" min="2019-01-01" required>
                         <div class="izquierda-f"><p class="contacto-aprox">*Fecha aproximada de la boda</p></div>
-                        <input id="Guests" class="control control-contacto" min="30" type="number" name="Cantidad de Invitados" placeholder="Cantidad de Invitados" required>
+                        <input id="Guests" class="control control-contacto" min="40" max="400" type="number" name="Cantidad de Invitados" placeholder="Cantidad de Invitados" required>
                         <input class="control control-contacto" type="tel" title="Digita un teléfono válido"  pattern="[0-9]{7}|[0-9]{10}" name="Teléfono" placeholder="Teléfono" required>
-                        <button class="boton control boton-contacto control-contacto bg-rosado color-t-blanco" type="submit"><i class="fa fa-envelope-o"></i> Cotizar</button>
+                        <button id="ButtonGetPrice" type="submit" class="boton control boton-contacto control-contacto bg-rosado color-t-blanco linea-bloque"><i class="fa fa-envelope-o"></i> Cotizar</button>
                     </form>
                 </div>
                 <div class="p-50 linea-bloque medio centrado">
                     <img class="contacto-imagen" src="img/gracias.jpg">
-                </div>   
-            </div>
-        </section>
-
-        <section id="cotiza">
-            <div class="contenedor">
-                <h2 class="galeria-titulo centrado">Tu cotización aquí</h2>     
-                <ol>
-                    <li>
-                        <h3 class="bg-rosa pad1">1. Logística y mobiliario</h3>
-                        <p class="column1 pad">Incluye sillas, mesas y transporte de servicios y moviliario.</p>
-                        <p class="column2 pad">$550.000</p>
-                    </li>
-                    <li>
-                        <h3 class="bg-rosa pad1">2. Decoración</h3>
-                        <p class="column1 pad">Recubrimiento de mesas y sillas.</p>
-                        <p class="column2 pad">$600.000</p>
-                    </li>
-                    <li>
-                       <h3 class="bg-rosa pad1">3. Catering</h3>
-                       <p class="column1 pad">Incluye menú de invitados y personal de servicio, bebidas no alcohólicas, brigada de servicio, y menaje.</p>
-                       <p class="column2 pad">$4.565.000</p>
-                    </li>
-                    <li>
-                        <h3 class="bg-rosa pad1">4. Ponque</h3>
-                        <p class="column1 pad">Ponque clásico</p>
-                        <p class="column2 pad">$570.000</p>
-                    </li>
-                    <li>
-                        <h3 class="bg-rosa pad1">5. Flores</h3>
-                        <p class="column1 pad">Incluye flores decorativas de ceremonia, recepcion, bouquet novia y boutonier (flor de accesorio para novio)</p>
-                        <p class="column2 pad">$1.810.000</p>
-                    </li>
-                    <li>
-                        <h3 class="bg-rosa pad1">6. Música</h3> 
-                        <p class="column1 pad">Incluye musica de sonido y DJ.</p>
-                        <p class="column2 pad">1.400.000</p>
-                    </li>
-                    <li>
-                        <h3 class="bg-rosa pad1">7. Wedding planner</h3>
-                        <p class="column1 pad">Incluye acompañamiento,asesoría y coordinación,antes y durante la boda.</p>
-                        <p class="column2 pad">700.000</p>
-                    </li>
-                    <li>
-                        <h3 class="bg-rosa pad1">8. Hacienda</h3>
-                        <p class="column1 pad">Incluye alquiler de la hacienda elgida</p>
-                        <p class="column2 pad">lo que vale cada una</p>
-                    </li>
-                </ol>
-                <div class="bg-rosado">
-                    <p class="column1 pad1">Valor Total</p>
-                    <p class="column2 pad1 derecha">$10.000.000</p>
                 </div>
             </div>
         </section>
+
+     
 
         <style>
             .column1{display: inline-block;width: 70%}
             .column2{display: inline-block;width: 29%}
             ol{list-style: none;}
             .pad{padding: 0.8em 3em;}
-            .pad1{padding: 0.5em 1em}
+            .pad1{padding: 0.5em 3em 0.5em 1em}
             #cotiza{margin-bottom: 10em}
+            .fs-normal{font-size:1.6em}
+            .guiones{margin: 0.5em 0em 0.5em 2em}
         </style>
 
         <script type="text/javascript">
@@ -596,7 +623,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 if(palabra.search('matrimonio') > -1){
                     boda.innerHTML = "Matrimonios";
                 }
-            };
+            }
 
             insertarPalabra();
         </script>
@@ -620,11 +647,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
 <script>
+const FormGetPrice = document.getElementById("FormGetPrice")
+const Prices = document.getElementById('Prices')
+const DataPrice = document.getElementById('DataPrice')
+const ButtonAgainDataPrice = document.getElementById('ButtonAgainDataPrice')
+FormGetPrice.addEventListener('submit', fillPrice, true)
+ButtonAgainDataPrice.addEventListener('click', againPrices, true)
+
+const LogisticForniture = document.getElementById("LogisticForniture")
+const Catering = document.getElementById("Catering")
+const Decoration = document.getElementById("Decoration")
+const Cake = document.getElementById("Cake")
+const Flowers = document.getElementById("Flowers")
+const Music = document.getElementById("Music")
+const WeddingPlanner = document.getElementById("WeddingPlanner")
+const Estate = document.getElementById("Estate")
+const TotalPrice = document.getElementById("TotalPrice")
 const guests = document.getElementById("Guests")
+
 const amountCakePerson = 30
 const quantityCake = 0.5
 const quantityChairsTable = 10
 const quantityGuestsWaiter = 15
+const quantityRoadFlower = 6
 const costChair = 5500
 const costTable = 10000
 const costLogistic = 550000
@@ -637,6 +682,16 @@ const costCaptainWaiter = 120000
 const costMenu = 39000
 const costMenuService = 20000
 const costSoftDrink = 2500
+const costPagoda = 200000
+const costChairFlower = 60000
+const costRoadFlower = 30000 
+const costTableFlower = 110000
+const costPrincipalTableFlower = 120000
+const costWifeFlower = 100000
+const costBoutonniere = 40000
+const costMusicDJ = 1400000
+const costWeddingPlanner = 700000
+const costPoundCake = 95000
 
 function amountCake(){
     const quantityGuest = guests.value * 1
@@ -651,6 +706,11 @@ function amountCake(){
 
     return amount
 }
+
+function getPriceCake(){
+    return amountCake() * costPoundCake
+}
+
 
 function getPriceLogisticFurniture(){
     const quantityGuest = guests.value * 1
@@ -681,7 +741,73 @@ function getPriceCatering(){
     return costWaiters + costMenus + costMenuService + costSoftDrinks + costCaptainWaiter
 }
 
+function getPriceFlowers(){
+    const quantityGuest = guests.value * 1
+    const quantityTables = Math.round(quantityGuest / quantityChairsTable)
+    const costRoadFlowers = costRoadFlower * Math.round(quantityGuest / quantityRoadFlower)  
+    const costTableFlowers = costTableFlower * quantityTables
+    
+    return costRoadFlowers + costTableFlowers + costBoutonniere + costWifeFlower + costPrincipalTableFlower + costPagoda + costChairFlower
+}
 
+function getPriceMusicDj(){
+    return costMusicDJ
+}
+
+function getPriceWeddingPlanner(){
+    return costWeddingPlanner
+}
+
+function getPriceEstate(){
+    const quantityGuest = guests.value * 1
+
+    if(quantityGuest <= 60) {
+        return 1800000
+    }
+
+    if (quantityGuest <= 100) {
+        return 2000000
+    } 
+
+    if (quantityGuest <= 120) {
+        return 2200000
+    }
+
+    return 2500000
+}
+
+function getTotalPrice(){
+    return getPriceEstate() + getPriceCatering() + getPriceDecoration() + getPriceCake() + getPriceFlowers() + getPriceLogisticFurniture() + getPriceMusicDj() + getPriceWeddingPlanner()
+}
+
+function formatMoney(number){
+    return '$ ' + new Intl.NumberFormat("es-CO").format(number)
+}
+
+function fillPrice(){
+    
+    LogisticForniture.innerText = formatMoney(getPriceLogisticFurniture())
+    Decoration.innerText = formatMoney(getPriceDecoration())
+    Catering.innerText = formatMoney(getPriceCatering())
+    Cake.innerText = formatMoney(getPriceCake())
+    Music.innerText = formatMoney(getPriceMusicDj())
+    Flowers.innerText = formatMoney(getPriceFlowers())
+    WeddingPlanner.innerText = formatMoney(getPriceWeddingPlanner())
+    Estate.innerText = formatMoney(getPriceEstate())
+    TotalPrice.innerText = formatMoney(getTotalPrice())
+
+    DataPrice.style.display = 'none'
+    Prices.style.display = 'block'
+
+    event.preventDefault()
+}
+
+function againPrices(){
+    DataPrice.style.display = 'block'
+    Prices.style.display = 'none'
+
+    event.preventDefault()
+}
 
 
 </script>
